@@ -1,6 +1,8 @@
-const withCSS = require('@zeit/next-css');
-module.exports = withCSS({
-  // Set this to true if you use CSS modules.
-  // See: https://github.com/css-modules/css-modules
-  cssModules: false,
-});
+const withPlugins = require('next-compose-plugins');
+const css = require('@zeit/next-css');
+const optimizedImages = require('next-optimized-images');
+
+module.exports = withPlugins([
+  [optimizedImages, {}],
+  [css, { cssModules: false }],
+]);
