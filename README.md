@@ -22,5 +22,6 @@ npx serve dist/apps/demo/exported
 Or the SSR server:
 
 ```
+yarn --cwd dist/apps/demo install
 yarn --cwd dist/apps/demo start
 ```
